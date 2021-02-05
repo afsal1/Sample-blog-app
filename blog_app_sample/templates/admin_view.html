@@ -1,0 +1,28 @@
+<html>
+<head>
+<h1 style="padding-left:500px";>Admin Home</h1>
+</head>
+<body>
+<a style="padding-left:1000px"; href ="admin_logout" >logout</a>
+
+
+<form method="POST" action="admin_view_save" >
+{% csrf_token %} 
+<div style="padding-left:450px ;padding-top:30px";>
+<label>Title :</label>
+<input type="text" name="title" required></br>
+</div>
+<div style="padding-left:420px ;padding-top:10px";>
+<label>Content :</label>
+<input type="text" name="content" required></br></div>
+<div style="padding-left:435px ;padding-top:10px";>
+<label>Image :</label>
+<input type="file" name="content_image" required></br></div>
+<div style="padding-left:540px ;padding-top:30px";>
+<button>Submit</button></br></div>
+</form>
+
+
+
+</body>
+</html>

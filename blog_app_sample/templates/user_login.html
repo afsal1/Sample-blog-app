@@ -1,0 +1,20 @@
+<html>
+<head><h1 style="padding-left:500px";>Admin login</h1></head>
+<body>
+
+<form method="POST" >
+{% csrf_token %}
+
+<div style = "padding-bottom: 30px;">
+<label style="padding-left:400px ;">Username :</label>
+<input  type="text" name="username" required></br></div>
+<label style="padding-left:400px ;padding-top: 50px;">Password :</label>
+<input type="password" name="password" required></br>
+<div style="padding-left:500px ;padding-top: 50px;">
+<button >Submit</button>
+</div>
+</form>
+
+</body>
+</html>
+<a style="padding-left:700px"; href="/user_registration" >Don't have an account ..?</a>

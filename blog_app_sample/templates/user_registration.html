@@ -1,0 +1,29 @@
+<html>
+<head><h1 style="padding-left:500px";>User Registration</h1></head>
+<body>
+
+<form method="POST" >
+{% csrf_token %}
+
+<div style = "padding-bottom: 30px;">
+<label style="padding-left:450px ;">Username :</label>
+<input  type="text" name="username" required></br></div>
+
+
+<div style = "padding-bottom: 30px;">
+<label style="padding-left:485px ;">Email :</label>
+<input  type="email" name="email" required></br></div>
+<label style="padding-left:455px ;padding-top: 50px;">Password :</label>
+<input type="password" name="password" required></br>
+<div style="padding-left:550px ;padding-top: 50px;">
+<button >Submit</button>
+</div>
+</form>
+
+</body>
+</html>
+<a style="padding-left:700px"; href="/user_login" >Already have an account ..?</a>
+
+
+
+

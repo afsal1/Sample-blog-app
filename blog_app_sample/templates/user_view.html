@@ -1,0 +1,21 @@
+
+<html>
+<head>View Blog</head>
+<body>
+<table>
+<tr>
+{% for list_item in list_items %}
+<td>{{ list_item.title1 }}</td></br>
+<td>{{ list_item.content_image }}</td></br>
+<td>{{ list_item.content }}</td></br>
+{% endfor %}
+</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+<a href ="user_logout" >logout</a>
