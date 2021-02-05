@@ -1,13 +1,24 @@
 
 <html>
 <head>View Blog</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>
 <body>
 <table>
 <tr>
 {% for list_item in list_items %}
-<td>{{ list_item.title1 }}</td></br>
-<td>{{ list_item.content_image }}</td></br>
-<td>{{ list_item.content }}</td></br>
+<h1 >{{ list_item.title1 }}</h1></br>
+<p align="center" >{{ list_item.content }}</p></br>
+<img src="{{ list_item.imageURL }}" height="400px" width="300px" alt=""></br>
 {% endfor %}
 </tr>
 </table>
