@@ -74,10 +74,13 @@ def admin_view_save(request):
 
         title = request.POST.get("title")
         content = request.POST.get("content")
-        content_image = request.FILES.get('content_image')
+        content_image = request.FILES['content_image']
+        fs = FileSystemStorage()
+        filename = fs.save(content_image.name, profile_pic)
+        profile_pic_url = fs.url(filename)
 
 
-        blog = Blog(title1=title, content=content, content_image=content_image)
+        blog = Blog(title1=title, content=content, content_image=profile_pic_url)
         blog.save()
         return redirect("admin_view")
 
@@ -88,4 +91,3 @@ def admin_view_save(request):
 def admin_logout(request):
     auth.logout(request)
     return redirect("admin_login")
-
